@@ -66,7 +66,7 @@ public final class Main {
     }
 
     private static void printCustomResponse(Response response) {
-        System.out.println("received: " + response.getContent() + ", mime " + response.getMimeType() + ", type " + response.getType());
+        System.out.println("received: " + response);
     }
 
     private static void printUser(ResponseUser user) {

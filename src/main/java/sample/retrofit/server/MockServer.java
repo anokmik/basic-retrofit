@@ -33,7 +33,7 @@ public final class MockServer implements Client {
         if (path.contains("error")) {
             throw RetrofitError.unexpectedError(request.getUrl(), new IOException("you can't always get what you want..."));
         } else if (path.contains("input")) {
-            return new TypedString("shIt happens");
+            return new TypedString("it happens");
         } else if (path.contains("user")) {
             return new TypedByteArray("application/json", converter.toJson(responseUser, responseUser.getClass()).getBytes());
         }

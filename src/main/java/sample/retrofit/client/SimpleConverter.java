@@ -35,7 +35,7 @@ final class SimpleConverter implements Converter {
             inputStream = body.in();
             String bodyContent = IOUtils.toString(inputStream, charset.displayName());
             if (Response.class.equals(type)) {
-                return new Response(bodyContent, type, body.mimeType());
+                return new Response(bodyContent, body.mimeType());
             } else {
                 return gson.fromJson(bodyContent, type);
             }
